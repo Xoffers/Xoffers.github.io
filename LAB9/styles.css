@@ -1,0 +1,157 @@
+h1,
+h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #050D18;
+}
+
+
+p {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 2;
+    color: #050D18;
+}
+
+a {
+    color: gray;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+button,
+.button {
+    background-color: #040B14;
+    color: gray;
+    border: none;
+    border-radius: 10 px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover,
+.button:hover {
+    color: white;
+}
+
+.button:active {
+    background-color: #0056b3;
+    transform: scale(0.98);
+}
+
+h1 {
+    margin: 20px 0 10px 0;
+/*TOP RIGHT BOTTOM LEF*/
+    text-align: left;
+}
+
+p {
+    padding: 10px;
+    line-height: 1.6;
+}
+
+.skills {
+    margin: 30px auto;
+    padding: 10px;
+    border: 2px;;
+}
+
+.skills h2 {
+    margin-bottom: 15px;
+    text-align: left;
+    color: #040B14;
+}
+
+.skills ul {
+    list-style-type: none;
+    padding: 10;
+}
+
+.skills li {
+    padding: 10px 0;
+}
+
+body {
+    font-size: 16px;
+    margin: 10px;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 15px;
+    padding: 20px;
+    justify-content: center;
+}
+
+@media (min-width: 480px) {
+    body {
+        font-size: 18px;
+    }
+    
+    .portfolio {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: 20px;
+    }
+    
+    .portfolio {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, sans-serif;
+}
+
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode p,
+body.dark-mode a {
+    color: #ffffff;
+}
+
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
