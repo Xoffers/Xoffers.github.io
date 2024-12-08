@@ -1,0 +1,291 @@
+.info-box {
+    display: flex;
+    gap: 20px;
+}
+
+.info-group {
+    flex: 1; 
+}
+.info-box ul {
+    list-style-type: none; 
+}
+
+.info-arrow {
+    width: 20px; 
+    height: 20px;
+    margin-right: 10px;
+}
+
+h1,
+h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #050D18;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+
+p {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 2;
+    color: #050D18;
+}
+
+.skills {
+    background-color: #F4FAFD;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px; 
+}
+
+.skill-bar {
+    margin-bottom: 15px;
+    font-size: 12px;
+}
+
+.skill-bar span {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    width: 90%;
+    background-color: #ddd;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar .fill {
+    background-color: #149DDD;
+    height: 20px;
+    line-height: 20px;
+    color: white;
+    text-align: right;
+    padding-right: 5px;
+    white-space: nowrap;
+}
+
+.exp {
+    display: flex;
+    gap: 20px;
+}
+
+.half-exp {
+    flex: 1; 
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+@media (min-width: 480px) {
+    body {
+        font-size: 18px;
+    }
+    
+    .photos {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: 20px;
+    }
+    
+    .photos {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, sans-serif;
+}
+
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode p {
+    color: #ffffff;
+}
+
+body.dark-mode .skills{
+    background-color: gray;
+}
+
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0b284b;
+}
+
+.portret {
+    margin-right: 30px;
+}
+
+.statistics {
+    margin-top: 10% ;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.summary {
+    margin-left: auto;
+}
+
+.experience {
+    margin-right: auto;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.maincontent {
+    padding-left: 500px;
+}
+
+.half-exp li{
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.sidebar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 350px;
+    background-color: #040b14;
+    height: 100%; 
+    position: fixed; 
+    overflow: auto;
+    top: 0;
+    left: 0;
+    text-align: left;
+  }
+
+.sidebar a {
+    color:gray;
+}
+#clock {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin: 120% 20% 0 0; 
+    color: #fff;
+}
+
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    opacity: 0.2;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #333;
+}
+
+.sidebar ul li a:hover {
+    color: #fff;
+    transition: all 0.3s;
+}
+.sidebar ul li a {
+    text-decoration: none; 
+    border-bottom: none; 
+}
+.sidebar ul {
+    list-style-type: none;
+    margin-right: 0%
+}
+.web-logo {
+    max-width: 100%;
+    height: auto;
+    display: block; 
+    border-radius: 50%;
+    border: 5px solid gray;
+    margin-left: 15%;
+}
+
+footer {
+    text-align: left; 
+    padding: 20px; 
+
+}
+.logo {
+    width: 30px; 
+    height: 30px; 
+    margin: 5px;
+}
+
+img.sidebar-logo {
+    width: 30px; 
+    height: 30px;
+    margin-right: 10px;
+}
+
+.web-logo-text { 
+    font-size: 25px; 
+    color: #ffffff; 
+    margin: 10px 0 10% 20%; 
+}
+
+.contact-logo {
+    width: 30px; 
+    height: 30px; 
+    margin-right: 10px;
+    margin-top: 10px;
+    border-radius: 20%;
+}
+
+.contact-logo:hover {
+    transform: scale(1.1); 
+}
+
+.circle-logo {
+    width: 20px; 
+    height: 20px;
+    margin-right: 10px;
+}
