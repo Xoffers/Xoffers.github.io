@@ -316,12 +316,43 @@
                 </math>
             </p>
             <footer id="contact">
+                <div class="contacts">
+                <div class="contact-form">
                 <h1 style="text-align: left;">Contact</h1>
                 <img src="LB8_Photos/line.png" style="float: left;" class="line">
                 <p style="margin-top: 100px;"><strong>Alex Carter</strong></p>
                 <p><img src="LB8_Photos/address.png" class="contact-logo"><strong>Address<br></strong> Vilnius, Vilniaus m. sav.</p>
                 <p><img src="LB8_Photos/call.png" class="contact-logo"><strong>Call Us<br></strong> +37068834852</p>
                 <p><img src="LB8_Photos/email.png" class="contact-logo"><strong>Email Us<br></strong> abc@mail.com</p>
+            </div>
+                <div class="contact-form">
+                    <form id="contact-forms">
+                    <label for="Name"> Name</label><br> 
+                    <input type="text" id="name" name="name" required><br>
+                    <label for="Surname"> Surname</label><br>
+                    <input type="text" id="surname" surname="surname" required><br>
+                    <label for="Email"> Email</label><br>
+                    <input type="email" id="email" email="email" required><br>
+                    <label for="Phone"> Phone Number</label><br>
+                    <input type="tel" id="phone" phone="phone" required><br>
+                    <label for="Address"> Address</label><br>
+                    <input type="text" id="address" address="address" required><br>
+                    <label for="q1"> Klausimas1</label><br>
+                    <input type="number" id="q1" q1="q1" min="1" max="10" required><br>
+                    <label for="q2"> Klausimas2</label><br>
+                    <input type="number" id="q2" q2="q2" min="1" max="10"  required><br>
+                    <label for="q3"> Klausimas3</label><br>
+                    <input type="number" id="q3" q3="q3" min="1" max="10"  required><br>
+                    <label for="q4"> Klausimas4</label><br>
+                    <input type="number" id="q4" q4="q4" min="1" max="10"  required><br>
+                    <label for="q5"> Klausimas5</label><br>
+                    <input type="number" id="q5" q5="q5" min="1" max="10"  required><br>
+                    <button type="button" id="saveButton">Send Message</button>
+                </form>
+                <div id="result"></div>
+                </div>
+            </div>
+                <div class="socials" style="text-align: center;">
                 <a href="https://twitter.com"><img src="LB8_Photos/X.png"
                         class="logo"></a>
                 <a href="https://facebook.com"><img
@@ -332,6 +363,7 @@
                         class="logo"></a>
                 <a href="https://www.linkedin.com"><img
                         src="LB8_Photos/linkedin.png" class="logo"></a>
+                    </div>
             </footer>
         </div>
     </body>

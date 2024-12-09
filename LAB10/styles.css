@@ -10,6 +10,15 @@
     list-style-type: none; 
 }
 
+.contacts {
+    display: flex;
+    gap: 20px;
+}
+
+.contact-form {
+    flex: 1;
+}
+
 .info-arrow {
     width: 20px; 
     height: 20px;
@@ -203,7 +212,7 @@ body {
     font-size: 30px;
     font-weight: bold;
     text-align: center;
-    margin: 120% 20% 0 0; 
+    margin: 60% 20% 0 0; 
     color: #fff;
 }
 
