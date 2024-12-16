@@ -34,23 +34,87 @@ scrollToTopBtn.onclick = function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
-document.getElementById('saveButton').addEventListener('click', function() {
-    const form = document.getElementById('contact-forms');
-    const formData = new FormData(form);
+const contactForm = document.getElementById('contactForm');
+const submitButton = document.getElementById('submitButton');
+const resultDiv = document.getElementById('result');
 
-    let dataObject = {};
-    formData.forEach((value, key) => {
-        dataObject[key] = value;
-    });
-    
-    const resultDiv = document.getElementById('result');
-    resultDiv.innerHTML='';
+function validateEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
 
-    for (const [key, value] of Object.entries(dataObject)) {
-        const p = document.createElement('p');
-        p.textContent = `${key}: ${value}`;
+function validatePhone(phone) {
+    const phoneRegex = /^\+370[0-9]{8}$/; 
+    return phoneRegex.test(phone);
+}
+
+function validateAddress(address) {
+    return address.trim().length > 0;
+}
+
+submitButton.addEventListener('click', () => {
+    const dataObject = {
+        Name: document.getElementById('name').value,
+        Surname: document.getElementById('surname').value,
+        Email: document.getElementById('email').value,
+        Phone: document.getElementById('phone').value,
+        Address: document.getElementById('address').value,
+        Question1: parseInt(document.getElementById('question1').value),
+        Question2: parseInt(document.getElementById('question2').value),
+        Question3: parseInt(document.getElementById('question3').value),
+        Question4: parseInt(document.getElementById('question4').value),
+        Question5: parseInt(document.getElementById('question5').value)
+    };
+
+    let validationErrors = [];
+
+    if (!validateEmail(dataObject.Email)) {
+        validationErrors.push('Invalid email address.');
+    }
+
+    if (!validatePhone(dataObject.Phone)) {
+        validationErrors.push('Invalid phone number.');
+    }
+
+    if (!validateAddress(dataObject.Address)) {
+        validationErrors.push('Address cannot be empty.');
+    }
+
+    if (validationErrors.length > 0) {
+        resultDiv.style.display = 'block';
+        resultDiv.innerHTML = `<p class="error">${validationErrors.join('<br>')}</p>`;
+        return;
     }
 
     console.log(dataObject);
-    document.getElementById('result').innerHTML = JSON.stringify(dataObject, null, 2)
+
+    resultDiv.style.display = 'block';
+    resultDiv.innerHTML = '';
+
+    Object.entries(dataObject).forEach(([key, value]) => {
+        resultDiv.innerHTML += `<p>${key}: ${value}</p>`;
+    });
+
+    const contactDetails = `Contact Info: Email - ${dataObject.Email}, Phone - ${dataObject.Phone}, Address - ${dataObject.Address}`;
+    resultDiv.innerHTML += `<p>${contactDetails}</p>`;
+
+    const averageScore = (
+        dataObject.Question1 +
+        dataObject.Question2 +
+        dataObject.Question3 +
+        dataObject.Question4 +
+        dataObject.Question5
+    ) / 5;
+
+    let averageMessage;
+    if (averageScore >= 0 && averageScore <= 4) {
+        averageMessage = '<span style="color:red">Low rating (0-4)</span>';
+    } else if (averageScore > 4 && averageScore <= 7) {
+        averageMessage = '<span style="color:orange">Medium rating (4-7)</span>';
+    } else {
+        averageMessage = '<span style="color:green">High rating (7-10)</span>';
+    }
+
+    resultDiv.innerHTML += `<p>Average Score: ${averageScore}</p>`;
+    resultDiv.innerHTML += `<p>${averageMessage}</p>`;
 });

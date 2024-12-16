@@ -3,20 +3,11 @@
     gap: 20px;
 }
 
-.info-group {
+.info{
     flex: 1; 
 }
 .info-box ul {
     list-style-type: none; 
-}
-
-.contacts {
-    display: flex;
-    gap: 20px;
-}
-
-.contact-form {
-    flex: 1;
 }
 
 .info-arrow {
@@ -212,7 +203,7 @@ body {
     font-size: 30px;
     font-weight: bold;
     text-align: center;
-    margin: 60% 20% 0 0; 
+    margin: 120% 20% 0 0; 
     color: #fff;
 }
 
@@ -297,4 +288,37 @@ img.sidebar-logo {
     width: 20px; 
     height: 20px;
     margin-right: 10px;
+}
+
+.contact-icons {
+    text-align: center;
+}
+
+.cq {
+    display: flex;
+    gap: 20px;
+}
+
+.contact-questions {
+    flex: 1;
+}
+
+.halfInfo {
+    display: flex;
+    gap: 20px;
+}
+
+.adrNumber, .sName {
+    flex: 1;
+}
+
+#submitButton {
+    margin-left:30%;
+}
+
+.error {
+    color: red;
+}
+.average {
+    font-weight: bold;
 }
