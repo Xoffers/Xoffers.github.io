@@ -46,16 +46,43 @@ document.getElementById('washing-machine').addEventListener('click', () => {
     document.getElementById('washing-info').textContent = 'Running Cycle';
 });
 
-const currentTrack = document.getElementById('current-track');
-document.getElementById('play-music').addEventListener('click', () => {
-    currentTrack.textContent = 'Song A'; 
+document.addEventListener("DOMContentLoaded", () => {
+    const playButton = document.getElementById("play-music");
+    const pauseButton = document.getElementById("pause-music");
+    const nextButton = document.getElementById("next-track");
+    const currentTrackLabel = document.getElementById("current-track");
+
+    const tracks = [
+        "FeelGood.mp3", 
+        "Blinding Lights.mp3",
+        "One Dance.mp3"
+    ];
+    let currentTrackIndex = 0;
+
+    const audio = new Audio();
+    audio.src = tracks[currentTrackIndex];
+    currentTrackLabel.textContent = `Track 1`; 
+
+    playButton.addEventListener("click", () => {
+        audio.play();
+    });
+
+    pauseButton.addEventListener("click", () => {
+        audio.pause();
+    });
+
+    nextButton.addEventListener("click", () => {
+        currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
+        audio.src = tracks[currentTrackIndex];
+        audio.play();
+        currentTrackLabel.textContent = `Track ${currentTrackIndex + 1}`;
+    });
+
+    audio.addEventListener("ended", () => {
+        nextButton.click();
+    });
 });
-document.getElementById('pause-music').addEventListener('click', () => {
-    currentTrack.textContent = 'Paused';
-});
-document.getElementById('next-track').addEventListener('click', () => {
-    currentTrack.textContent = 'Song B';
-});
+
 
 const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
