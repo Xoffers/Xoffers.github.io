@@ -1,0 +1,423 @@
+body {
+    font-family: Arial, sans-serif;    
+    background-image: url('Photo/homeBackBlurr.jpg');
+    color: black;
+}
+
+
+.control-panel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 150px auto;
+    max-width: 1200px;
+    gap: 20px;
+}
+
+.control {
+    background: white;
+    border: 5px solid #e2e2e2;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.play-music img {
+    width: 30px; 
+    height: 30px; 
+}
+
+.pause-music img{
+    width: 30px; 
+    height: 30px; 
+} 
+
+.next-track img {
+    width: 30px; 
+    height: 30px; 
+}
+
+.control h2 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.air-quality-check {
+    margin: 5px;
+    padding: 10px 15px;
+    background: #ffa90b;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+.fridge-status {
+    margin: 5px;
+    padding: 10px 15px;
+    background: #ffa90b;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+.oven-control {
+    margin: 5px 10px;
+    padding: 10px 15px;
+    background: #ffa90b;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.washing-machine {
+    margin: 5px;
+    padding: 10px 15px;
+    background: #ffa90b;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.play-music, .pause-music, .next-track, .blinds-open, .blinds-close {
+    border: none; 
+    outline: none; 
+    background: none; 
+}
+
+.blinds-open img {
+   margin-right: 15px;
+}
+
+button:hover {
+    background: #bd7d07;
+}
+
+input[type=\"range\"] {
+    width: 100%;
+}
+
+.horizontalBar {
+    overflow: hidden;
+    top: 0;
+}
+
+.horizontalBar ul {   
+    list-style-type: none;
+    margin: 0;
+    padding: 0; 
+    background-color: #ffa90b;
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    overflow: hidden;
+    top: 0;
+}
+
+.horizontalBar li {
+    float: left;
+}
+
+.horizontalBar li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: black;
+}
+
+.horizontalBar li a:hover {
+    background-color: #bd7d07;
+}
+
+.horizontalBar h1 {
+    background-color: transparent;
+    color: black;
+    border: transparent;
+}
+
+.welcome-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url(Photo/homeBack.jpg);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+}
+
+.welcome-screen h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.welcome-screen button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #ffa90b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.welcome-screen button:hover {
+    background-color: #bd7d07;
+}
+
+#welcome-screen form, h1 {
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid #424242;
+}
+
+.hidden {
+    display: none;
+}
+
+.contacts {
+    position: static; 
+    margin: 0 auto; 
+    max-width: 600px; 
+    width: 90%;
+    padding: 40px;
+    background-color: #2a2a2a;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(50%);
+}
+.contacts form input,
+.contacts form textarea,
+.contacts form button {
+    width: 100%; 
+    margin-bottom: 15px; 
+    padding: 10px; 
+    border-radius: 5px; 
+}
+.contacts form button {
+    background-color: #ffa90b; 
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.contacts form button:hover {
+    background-color: #bd7d07; 
+}
+
+.logo {
+    width: 30px; 
+    height: 30px; 
+}
+
+.logo:hover {
+    background-color: white;
+    border: 0.5px solid white;
+    border-radius: 100%;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0; 
+}
+
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    opacity: 0.2;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #333;
+}
+
+input[type="range"] {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background: #ffa90b; 
+    border-radius: 5px; 
+    outline: none; 
+    transition: background 0.3s ease-in-out;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 20px; 
+    height: 20px; 
+    background: #333; 
+    border-radius: 50%; 
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    background: #ffa90b; 
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #333;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+    background: #ffa90b;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#login-form input {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#login-form button {
+    padding: 10px 20px;
+    background-color: #ffa90b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#login-form button:hover {
+    background-color: #bd7d07;
+}
+
+#airflow-level {
+    appearance: none;
+    -webkit-appearance: none;
+    background: url('Photo/arrowDown.png') no-repeat right 10px center; 
+    background-size: 15px; 
+    padding-right: 30px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 40px;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .control-panel {
+        flex-direction: column;
+        align-items: center;
+        margin: 50px auto;
+        gap: 10px;
+    }
+
+    .control {
+        width: 90%;
+    }
+
+    .horizontalBar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .horizontalBar li {
+        float: none;
+    }
+
+    .horizontalBar li a {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .welcome-screen h1 {
+        font-size: 2em;
+    }
+
+    .welcome-screen button {
+        font-size: 1em;
+    }
+
+    .control h2 {
+        font-size: 1.2em;
+    }
+
+    .contacts {
+        padding: 20px;
+    }
+
+    .contacts form input, .contacts form textarea, .contacts form button {
+        font-size: 14px;
+    }
+
+    #scrollToTopBtn {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 992px) {
+    .horizontalBar ul {
+        flex-wrap: wrap;
+    }
+
+    .horizontalBar li {
+        margin-bottom: 10px;
+    }
+
+    .horizontalBar li h1 {
+        text-align: center;
+    }
+}
+
+input[type="range"] {
+    width: calc(100% - 20px);
+}
+
+button {
+    font-size: 1em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+

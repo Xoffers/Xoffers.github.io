@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Smart Home Interface</title>
+        <link rel="stylesheet" href="styles.css">
+        <script defer src="script.js"></script>
+    </head>
+    <body>
+        <div id="welcome-screen" class="welcome-screen">
+            <h1 >Welcome Home!</h1>
+            <form id="login-form">
+                <input type="text" id="username" placeholder="Enter your name" required>
+                <input type="password" id="password" placeholder="Enter your password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        <nav class="horizontalBar">
+            <ul>
+                <li><a href="#main">Home</a></li>
+                <li><a href="#contacts">Contact</a></li>
+                <li><h1 style="margin: 5px 0 0 575px">Smart Home Control Panel</h1></li>
+            </ul>
+        </nav>
+        <button id="scrollToTopBtn" title="Go to top"><img
+            src="Photo/scroll.png" class="scroll"></button>
+        <main id="main">
+            <section class="control-panel" id="control-panel">
+                <div class="control temperature">
+                    <h2>Room Temperature</h2>
+                    <input  type="range"
+                        id="temperature-slider" min="16" max="30" value="22">
+                    <p>Temperature: <span
+                            id="temperature-value">22</span>&deg;C</p>
+                </div>
+                <div class="control air-quality">
+                    <h2>Air Flow & Quality</h2>
+                    <label>
+                        Airflow Level:
+                        <select id="airflow-level">
+                            <option value="low">Low</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </label>
+                    <button id="air-quality-check" class="air-quality-check">Check Air Quality</button>
+                    <p id="air-quality-status">Status: Good</p>
+                </div>
+                <div class="control lighting">
+                    <h2>Lighting</h2>
+                    <label>
+                        Brightness:
+                        <input type="range" id="light-slider" min="0" max="100"
+                            value="50">
+                    </label>
+                    <p>Brightness Level: <span id="light-value">50%</span></p>
+                </div>
+                <div class="control blinds">
+                    <h2>Blinds</h2>
+                    <button id="blinds-open" class="blinds-open"><img src="Photo/openBlinds.png"></button>
+                    <button id="blinds-close" class="blinds-close"><img src="Photo/closeBlinds.png"></button>
+                    <p>Blinds Status: <span id="blinds-status">Closed</span></p>
+                </div>
+                <div class="control appliances">
+                    <h2>Appliances</h2>
+                    <p><button id="fridge-status" class="fridge-status">Refrigerator Status</button>:
+                        <span id="fridge-info" class="">Normal</span></p>
+                    <p><button id="oven-control" class="oven-control">Oven Remote Control</button>:
+                        <span id="oven-info">Off</span></p>
+                    <p><button id="washing-machine" class="washing-machine">Washing Machine</button>:
+                        <span id="washing-info">Idle</span></p>
+                </div>
+                <div class="control music">
+                    <h2>Music Control</h2>
+                    <p>Now Playing: <span id="current-track">No Track</span></p>
+                    <button id="play-music" class="play-music"><img src="Photo/play.png"></button>
+                    <button id="pause-music" class="pause-music"><img src="Photo/pause.png"></button>
+                    <button id="next-track" class="next-track"><img src="Photo/next.png"></button>
+                </div>
+            </section>
+
+            <section class="contacts" id="contacts" >
+                <p>If you have any questions, feel free to reach out to us.</p>
+            <form>
+                <label for="name">Your Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Your Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+                <button type="submit">Send</button>
+            </form>        </div>
+        <div class="socials" style="text-align: center;">
+        <a href="https://twitter.com"><img src="Photo/X.png"
+                class="logo"></a>
+        <a href="https://facebook.com"><img
+                src="Photo/facebook.png" class="logo"></a>
+        <a href="https://www.instagram.com"><img
+                src="Photo/instagram.png" class="logo"></a>
+        <a href="https://discord.com"><img src="Photo/discord.png"
+                class="logo"></a>
+        <a href="https://www.linkedin.com"><img
+                src="Photo/linkedin.png" class="logo"></a>
+            </div>
+            </section>
+        </main>
+    </body>
+</html>
